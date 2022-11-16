@@ -1,3 +1,14 @@
 #httpdイメージをpullする
 docker image pull httpd
 
+#コンテナを作成(ホストは8080ポートを開け、コンテナは80(http)を開く。)
+docker container run -d -p 8080:80 httpd
+
+#コンテナIDを検索
+docker container ls
+
+#コンテナにログイン
+docker exec -it 2e0f190b6717 /bin/bash
+
+#インデックスファイルの確認（ドキュメントディレクトリは/usr/local/apache2/htdocs/）
+cat htdocs/index.html
