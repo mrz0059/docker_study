@@ -1,0 +1,3 @@
+#httpdイメージをpullする
+docker image pull httpd
+
